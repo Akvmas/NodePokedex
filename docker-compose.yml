@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  node-pokedex:
+    container_name: node-pokedex
+
+    ports:
+      - "800:5001"
+
+    image: node:latest
+
+    volumes:
+      - ./app:/app
+
+    working_dir:  /app
+    command: "node index.js"
